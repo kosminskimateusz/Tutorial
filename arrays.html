@@ -5,16 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays</title>
+
 <body>
     <script type="text/javascript">
+        // Deklaracja tablicy
         var names = ["Jan", "Ala", "Mateusz"];
-
+        // Inny sposób deklaracji tablicy
         var students = new Array();
-        students[0] = names[1];
-        students[1] = names[0];
+        students[0] = names[0];
+        students[1] = names[1];
         students[2] = names[2];
         students[3] = "Jolanta";
-        document.write(names.length + " " + students.length);
+
+        document.write("Names length: " + names.length + "<br />Students length: " + students.length);
+        document.write("<br />");
+
+        Array.prototype.displayItems = function () {
+            for (var i = 0; i < this.length; i++) {
+                document.write(this[i] + "<br />");
+            }
+        }
+        document.write("<br />Students items: <br />");
+        students.displayItems();
+        document.write("<br />Students sorted items: <br />");
+        students.sort();
+        students.displayItems();
+        document.write("<br />Students sorted reversed items: <br />");
+        students.reverse();
+        students.displayItems();
     </script>
 </body>
 
