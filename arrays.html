@@ -7,6 +7,7 @@
     <title>Arrays</title>
 
 <body>
+    <!-- https://www.guru99.com/learn-arrays-in-javascript.html -->
     <script type="text/javascript">
         // Deklaracja tablicy
         var names = ["Jan", "Ala", "Mateusz"];
@@ -27,11 +28,26 @@
         }
         document.write("<br />Students items: <br />");
         students.displayItems();
+
         document.write("<br />Students sorted items: <br />");
         students.sort();
         students.displayItems();
+
         document.write("<br />Students sorted reversed items: <br />");
         students.reverse();
+        students.displayItems();
+        
+        document.write("<br />Students sorted deleted last items: <br />");
+        students.sort();
+        students.pop();
+        students.displayItems();
+
+        document.write("<br />Students sorted deleted first items: <br />");
+        students.shift();
+        students.displayItems();
+        
+        document.write("<br />Students added Mateusz, Ala, Maja: <br />");
+        students.push("Mateusz", "Ala", "Maja");
         students.displayItems();
     </script>
 </body>
